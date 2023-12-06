@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightBox Painel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #ddd;
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 2px solid #1a1a1a;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #1a1a1a;
+        }
+
+        button a {
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .created-by {
+            color: #ddd;
+            font-size: 0.9em;
+            display: inline;
+        }
+
+        .created-by a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .created-by a:hover {
+            text-decoration: underline;
+        }
+
+        .visitor-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1em;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .counter-wrapper {
+            display: inline-block;
+            background-color: #1a1a1a;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .counter-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff7b00; /* Cor laranja para o número de visitantes */
+        }
+
+        .visitor-counter span {
+            margin-right: 5px;
+        }
+    </style>
+
+    <script>
+        // Verifica se já existe um contador no localStorage
+        if (!localStorage.getItem('visitCount')) {
+            localStorage.setItem('visitCount', 0);
+        }
+
+        // Incrementa o contador e exibe no HTML
+        const visitCount = parseInt(localStorage.getItem('visitCount')) + 1;
+        localStorage.setItem('visitCount', visitCount);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('counter').innerText = visitCount;
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>NightBox Painel</h1>
+    </header>
+
+    <main>
+        <p>O NightBox é uma ferramenta em Batch Script de código aberto para otimização de desempenho no Windows. Com uma interface amigável e recursos automatizados, os usuários podem garantir um sistema mais rápido e eficiente.</p>
+
+        <button>
+            <a href="https://github.com/0DarkMode0/NightBox" target="_blank">
+                Download
+            </a>
+        </button>
+    </main>
+
+    <footer>
+        <p class="created-by">• Criado por <a href="https://github.com/0DarkMode0" target="_blank">DarkMode</a> •</p>
+    </footer>
+
+    <div class="visitor-counter">
+        <div class="counter-wrapper">
+            <span id="counter" class="counter-value"></span>
+        </div>
+    </div>
+
+</body>
+</html>
