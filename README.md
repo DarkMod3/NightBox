@@ -2,7 +2,7 @@
     <img src="https://i.imgur.com/iG2xjB7.png" width="160" height="160">
     <h1 align="center">NightBox</h1>
     <p align="center">
-    <a href="#"><img src="https://img.shields.io/badge/RELEASE-v2-blue?style=for-the-badge&"></a>
+    <a href="#"><img src="https://img.shields.io/badge/RELEASE-v1-blue?style=for-the-badge&"></a>
     <a href="#"><img src="https://img.shields.io/badge/batch-4D4D4D?style=for-the-badge&logo=windows%20terminal&logoColor=white"></a>
     <a href="#"><img src="https://img.shields.io/badge/powershell-5391FE?style=for-the-badge&logo=powershell&logoColor=white"></a>
 </p>
