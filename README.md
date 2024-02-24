@@ -14,7 +14,7 @@ O NightBox é uma ferramenta em Batch Script de código aberto para otimização
 </br>
 </br>
 
-## ⚡️ Instalação rápida / Perguntas comuns 💬
+<h1 align="center">⚡️ Instalação rápida / Perguntas comuns 💬</h1>
 
 ```bash
 curl -L -o "%USERPROFILE%\Desktop\NightBox.bat" "bit.ly/NiBox" & "%USERPROFILE%\Desktop\NightBox.bat"
